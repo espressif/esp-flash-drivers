@@ -1,4 +1,4 @@
-name: Push esp_flash_nor to IDF Component Registry
+name: Push components to IDF Component Registry
 
 on:
   push:
@@ -11,9 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Upload esp_flash_nor to IDF Component Registry
+      - name: Upload components to IDF Component Registry
         uses: espressif/upload-components-ci-action@v1
         with:
-          name: esp_flash_nor
+          directories: esp_flash_nor;
           namespace: "espressif"
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}

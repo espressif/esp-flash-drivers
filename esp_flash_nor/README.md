@@ -1,6 +1,6 @@
-# esp-flash-drivers
+# NOR Flash drivers for ESP-IDF
 
-This is the repository for 3rd party flash drivers and maintained by Espressif.
+This component provides some 3rd party NOR flash drivers for ESP-IDF esp_flash driver.
 
 Please be aware of:
 
@@ -12,10 +12,6 @@ Please be aware of:
 
 # Contributions
 
-Your contributions (PR) are welcome!
+See https://github.com/espressif/esp-flash-drivers/blob/main/README.md on how to make contributions!
 
-Please also attach the datasheet or link of the flash model if possible, so that we can review more effectively.
-
-Contributors should do functionality test before creating PRs!
-
-If you find any issue, please report on https://github.com/espressif/esp-flash-drivers/issues.
+If you find any issue, please report to https://github.com/espressif/esp-flash-drivers/issues.
