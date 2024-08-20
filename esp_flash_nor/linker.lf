@@ -1,0 +1,4 @@
+[mapping:custom_flash_driver]
+archive: libcustom_flash_driver.a
+entries:
+    spi_flash_chip_eon (noflash)
