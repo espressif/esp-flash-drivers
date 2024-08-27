@@ -1,6 +1,6 @@
 version: "0.0.1"
 description: "Component of 3rd party NOR flash drivers"
-url: https://github.com/espressif/esp-flash-drivers/esp_flash_nor
+url: https://github.com/espressif/esp-flash-drivers
 dependencies:
   idf:
     version: ">=5.0"
