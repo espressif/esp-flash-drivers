@@ -1,4 +1,5 @@
 [mapping:custom_flash_driver]
 archive: libcustom_flash_driver.a
 entries:
-    spi_flash_chip_eon (noflash)
+    if APP_BUILD_TYPE_PURE_RAM_APP = n:
+        spi_flash_chip_eon (noflash)
