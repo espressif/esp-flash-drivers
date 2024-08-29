@@ -1,5 +1,5 @@
-[mapping:custom_flash_driver]
-archive: libcustom_flash_driver.a
+[mapping:espressif__esp_flash_nor]
+archive: libespressif__esp_flash_nor.a
 entries:
     if APP_BUILD_TYPE_PURE_RAM_APP = n:
         spi_flash_chip_eon (noflash)
