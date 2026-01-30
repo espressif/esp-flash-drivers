@@ -11,9 +11,16 @@
 #include <string.h>
 #include <sys/param.h> // For MIN/MAX
 #include "esp_log.h"
+#include "esp_attr.h"
+#include "esp_idf_version.h"
+
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(6, 0, 0)
+#include "esp_flash_chips/spi_flash_chip_generic.h"
+#include "esp_flash_chips/spi_flash_defs.h"
+#else
 #include "spi_flash_chip_generic.h"
 #include "spi_flash/spi_flash_defs.h"
-#include "esp_attr.h"
+#endif
 
 
 // Not for all the vendors
