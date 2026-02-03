@@ -2,7 +2,13 @@
 
 #include <stdint.h>
 #include "esp_flash.h"
+#include "esp_idf_version.h"
+
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(6, 0, 0)
+#include "esp_flash_chips/spi_flash_chip_driver.h"
+#else
 #include "spi_flash_chip_driver.h"
+#endif
 
 #ifdef __cplusplus
 extern "C" {
