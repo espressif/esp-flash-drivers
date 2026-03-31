@@ -1,0 +1,33 @@
+name: Build Custom Flash Driver Example
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout esp-flash-drivers repository
+      uses: actions/checkout@v3
+
+    - name: Checkout ESP-IDF repository
+      uses: actions/checkout@v3
+      with:
+        repository: espressif/esp-idf
+        path: esp-idf
+
+    - name: Set up esp-flash-drivers submodule
+      run: git submodule update --init --recursive
+
+    - name: Build custom_flash_driver example
+      run: |
+        cd esp-idf
+        ./install.sh
+        . ./export.sh
+        cd examples/storage/custom_flash_driver
+        idf.py set-target esp32
+        idf.py build
